@@ -15,6 +15,7 @@
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --radius-md: 0.375rem;
+    --radius-xl: 0.75rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -173,6 +174,12 @@
   }
 }
 @layer utilities {
+  .col-\[full-start\/m-end\] {
+    grid-column: full-start/m-end;
+  }
+  .col-\[full-start\/main-end\] {
+    grid-column: full-start/main-end;
+  }
   .col-\[main-start\/full-end\] {
     grid-column: main-start/full-end;
   }
@@ -197,6 +204,12 @@
       max-width: 96rem;
     }
   }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
+  }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -217,6 +230,15 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-\[317px\] {
+    max-width: 317px;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .grow {
+    flex-grow: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -242,6 +264,9 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .gap-7 {
+    gap: calc(var(--spacing) * 7);
+  }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
@@ -251,21 +276,57 @@
   .gap-\[100px\] {
     gap: 100px;
   }
+  .gap-\[115px\] {
+    gap: 115px;
+  }
   .gap-y-\[54px\] {
     row-gap: 54px;
+  }
+  .place-self-end {
+    place-self: end;
+  }
+  .self-end {
+    align-self: flex-end;
   }
   .rounded-md {
     border-radius: var(--radius-md);
   }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .bg-\[\#F5B5BC\] {
+    background-color: #F5B5BC;
+  }
+  .bg-\[\#FEECFA\] {
+    background-color: #FEECFA;
   }
   .object-cover {
     object-fit: cover;
   }
   .object-center {
     object-position: center;
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-3\.5 {
+    padding-block: calc(var(--spacing) * 3.5);
   }
   .text-center {
     text-align: center;
@@ -278,9 +339,18 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .text-\[48px\] {
+    font-size: 48px;
+  }
+  .text-\[64px\] {
+    font-size: 64px;
+  }
   .leading-\[100\%\] {
     --tw-leading: 100%;
     line-height: 100%;
+  }
+  .text-\[\#F5B5BC\] {
+    color: #F5B5BC;
   }
   .underline {
     text-decoration-line: underline;
