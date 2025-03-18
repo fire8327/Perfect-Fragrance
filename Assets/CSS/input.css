@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 @import "tailwindcss";
 
 @layer base {
-    #__nuxt{
+    body{
         @apply flex flex-col min-h-screen bg-white text-black
     }
         
@@ -31,4 +32,9 @@
     .container{        
         @apply max-w-[var(--widthContent)]
     } 
+}
+
+body {
+    font-family: "Italiana", sans-serif;
+    font-style: normal;
 }
